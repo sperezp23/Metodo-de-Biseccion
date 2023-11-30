@@ -1,0 +1,108 @@
+# Bisection Method - Numerical Analysis
+
+This project consists of a Python implementation of the bisection method to find roots of functions within a given interval. 
+The code focuses on providing an interactive solution to find roots with a defined accuracy.
+
+## Features
+
+- Interactive Bisection Method: The implementation allows the user to input parameters like initial interval, tolerance, error type, and maximum number of iterations.
+
+- Results Saving: Option to save results in a text file and generate an Excel file with iteration data.
+
+- Support for File Inputs: Possibility to load inputs from text files (.txt) or JSON files.
+
+- Parameter and Variable Information: Descriptions of method parameters and variables used in the code are included.
+
+## Usage
+
+1. Clone the Repository: `git clone https://github.com/your_username/your_project.git`
+
+2. Requirements: Ensure necessary libraries are installed, as mentioned in the `Funsiones_Biseccion.py` file.
+
+3. Code Execution: Run the main script (`Metodo_Biseccion.py`) and follow the instructions provided in the console to input parameters.
+
+4. Results: Text files (`resultado_biseccion.txt`) and an Excel file (`Datos_Biseccion.xlsx`) with iteration data will be generated if the user desires;
+   otherwise, the final result along with other interesting data is printed in the console.
+
+## Project Structure
+
+- `Funsiones_Biseccion.py`: Contains necessary functions for calculating the root using the bisection method.
+
+- `Metodo_Biseccion.py`: Main script for executing the bisection method with user interaction to input parameters.
+
+- Input Files (`Entradas.txt`, `Entradas.json`): Optional files containing input data for method parameters.
+
+- Console Inputs: The program prompts the user to input necessary parameters for calculating the function's root (This process is carried out if the user does not have an input file).
+
+## Usage Example
+
+To use the bisection method:
+
+1. Run the main script `Metodo_Biseccion.py`.
+2. Follow the instructions to input interval parameters, tolerance, error type, and the maximum number of iterations.
+3. Review the generated files with results (`resultado_biseccion.txt` and `Datos_Biseccion.xlsx`) for additional analysis.
+
+## Contributions
+
+Contributions are welcome! Feel free to fork the project and send pull requests with improvements, corrections, or new functionalities.
+
+## Author
+
+Name: Santiago Pérez Puerta
+Contact: sperezp23@gmail.com
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Método de Bisección - Análisis Numérico
+
+Este proyecto consiste en una implementación en Python del método de bisección para encontrar raíces de funciones dentro de un intervalo dado.
+El código se enfoca en proporcionar una solución interactiva para encontrar raíces con una precisión definida.
+
+## Funcionalidades
+
+- Método de Bisección Interactivo: La implementación permite al usuario ingresar los parámetros como intervalo inicial, tolerancia, tipo de error y número máximo de iteraciones.
+
+- Guardado de Resultados: Opción para guardar los resultados en un archivo de texto y generar un archivo Excel con los datos de las iteraciones.
+
+- Soporte para Entradas desde Archivos: Posibilidad de cargar las entradas desde archivos de texto (.txt) o archivos JSON.
+
+- Información sobre Parámetros y Variables: Se incluyen descripciones de los parámetros del método y las variables utilizadas en el código.
+
+## Uso
+
+1. Clonar el Repositorio: `git clone https://github.com/tu_usuario/tu_proyecto.git`
+
+2. Requisitos: Asegúrate de tener instaladas las librerías necesarias, mencionadas en el archivo `Funsiones_Biseccion.py`.
+
+3. Ejecución del Código: Ejecutar el script principal (`Metodo_Biseccion.py`) y seguir las instrucciones proporcionadas en la consola para ingresar los parámetros.
+
+4. Resultados: Se generarán archivos de texto (`resultado_biseccion.txt`) y un archivo Excel (`Datos_Biseccion.xlsx`) con los datos de las iteraciones si el usuario así lo desea, 
+   de lo contrario, se imprime el resultado final junto con otros datos de interes en consola.
+
+## Estructura del Proyecto
+
+- `Funsiones_Biseccion.py`: Contiene las funciones necesarias para el cálculo de la raíz por el método de bisección.
+
+- `Metodo_Biseccion.py`: Script principal para la ejecución del método de bisección con la interacción del usuario para ingresar parámetros.
+
+- Archivos de entrada (`Entradas.txt`, `Entradas.json`): Opcionales. Contienen datos de entrada para los parámetros del método.
+
+- Entradas por consola: El programa pide al usuario ingresar los parametros necesarios para el calculo de la raíz de la funcion establecidad
+  (Este proceso se lleva a cavo si el usuario no cuenta con un archivo de esntradas). 
+
+## Ejemplo de Uso
+
+Para utilizar el método de bisección:
+
+1. Ejecuta el script principal `Metodo_Biseccion.py`.
+2. Sigue las instrucciones para ingresar los parámetros del intervalo, tolerancia, tipo de error y número máximo de iteraciones.
+3. Revisa los archivos generados con los resultados (`resultado_biseccion.txt` y `Datos_Biseccion.xlsx`) para análisis adicional.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Siéntete libre de hacer un *fork* del proyecto y enviar *pull requests* con mejoras, correcciones o nuevas funcionalidades.
+
+## Autor
+
+Nombre: Santiago Pérez Puerta
+Contacto: sperezp23@gmail.com
