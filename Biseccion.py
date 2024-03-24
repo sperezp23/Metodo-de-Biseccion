@@ -1,9 +1,9 @@
-# %% Metodo de Bisección
+# %% Método de Bisección
 '''
-i: numero de interaciones del metodo
-E: error del metodo, calcula el error entre $ (P_n - Pn-1)/Pn $
-Delta: calcula la diferencia entre la funcion y el cero
-Alfa: parametro que me ayuda a determinar la variación del error $ E/alfa $
+i: numero de iteraciones del método
+E: error del método, calcula el error entre $ (P_n - Pn-1)/Pn $
+Delta: calcula la diferencia entre la función y el cero
+Alfa: parámetro que me ayuda a determinar la variación del error $ E/alfa $
 Epsilon: es el "cero" de la maquina
 ''' 
 
@@ -16,10 +16,10 @@ import pandas as pd
 import json
 
 # %% Funciones
-import Funsiones_Biseccion as f
+import Funciones_Biseccion as f
 
 # %% Entradas
-print("\nMetodo de Bisección\n")
+print("\nMétodo de Bisección\n")
 
 #Archivo con las entradas
 archivo = input("¿Tiene un archivo de texto con las entradas? y/n\n")
@@ -61,7 +61,7 @@ else:
     b = float(input("Valor de b\n"))
     TOL = float(input("Ingrese el valor de la tolerancia(TOL)\n"))
     tipErr = int(input("Escoja el tipo de error, 1:E_abs, 2:E_rel, 3:E_%\n"))
-    No = int(input("Ingrese el numero maximo de interaciones(No)\n"))
+    No = int(input("Ingrese el numero máximo de iteraciones(No)\n"))
     
 #Guardar resultado
 guardar = input("¿Quiere guardar el resultado? y/n\n")
@@ -83,7 +83,7 @@ a1 = "a(-)"
 b1 = "b(+)"
 aux = ""
 
-# %% Cosideraciones iniciales
+# %% Consideraciones iniciales
 if TOL == 0.0:
     TOL = epsilon
 
@@ -123,7 +123,7 @@ while E> epsilon and i<=No:
     if (FP==0.0)or(delta<TOL):
         print("-------------------------------------------------------------")
         print("Proceso exitoso")
-        print("Datos de la ultima interación")
+        print("Datos de la ultima iteración")
         print("[a,b] = ["+str(Linf)+","+str(Lsup)+"]")
         print("p =",p)
         print("f(p) =",FP)
@@ -168,7 +168,7 @@ while E> epsilon and i<=No:
             columns=[a1,b1,"p","f(p)","Error"+Err,"Alfa","Delta","TOL"])
             del(resultados)
             
-            #Archivo de excel con los datos de las intereciones
+            #Archivo de excel con los datos de las iteraciones
             df_resultados.to_excel("Datos_Biseccion.xlsx")
             
         break    
@@ -185,4 +185,4 @@ while E> epsilon and i<=No:
     alfa = E
     
 if i > No:
-    print("\nEl metodo ha fallado luego de la interación No =", i-1)    
+    print("\nEl método ha fallado luego de la iteración No =", i-1)    

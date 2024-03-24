@@ -17,7 +17,7 @@ The code focuses on providing an interactive solution to find roots with a defin
 
 1. Clone the Repository: `git clone https://github.com/your_username/your_project.git`
 
-2. Requirements: Ensure necessary libraries are installed, as mentioned in the `Funsiones_Biseccion.py` file.
+2. Requirements: Ensure necessary libraries are installed, as mentioned in the `Funciones_Biseccion.py` file.
 
 3. Code Execution: Run the main script (`Metodo_Biseccion.py`) and follow the instructions provided in the console to input parameters.
 
@@ -26,7 +26,7 @@ The code focuses on providing an interactive solution to find roots with a defin
 
 ## Project Structure
 
-- `Funsiones_Biseccion.py`: Contains necessary functions for calculating the root using the bisection method.
+- `Funciones_Biseccion.py`: Contains necessary functions for calculating the root using the bisection method.
 
 - `Metodo_Biseccion.py`: Main script for executing the bisection method with user interaction to input parameters.
 
@@ -72,7 +72,7 @@ El código se enfoca en proporcionar una solución interactiva para encontrar ra
 
 1. Clonar el Repositorio: `git clone https://github.com/tu_usuario/tu_proyecto.git`
 
-2. Requisitos: Asegúrate de tener instaladas las librerías necesarias, mencionadas en el archivo `Funsiones_Biseccion.py`.
+2. Requisitos: Asegúrate de tener instaladas las librerías necesarias, mencionadas en el archivo `Funciones_Biseccion.py`.
 
 3. Ejecución del Código: Ejecutar el script principal (`Metodo_Biseccion.py`) y seguir las instrucciones proporcionadas en la consola para ingresar los parámetros.
 
@@ -81,7 +81,7 @@ El código se enfoca en proporcionar una solución interactiva para encontrar ra
 
 ## Estructura del Proyecto
 
-- `Funsiones_Biseccion.py`: Contiene las funciones necesarias para el cálculo de la raíz por el método de bisección.
+- `Funciones_Biseccion.py`: Contiene las funciones necesarias para el cálculo de la raíz por el método de bisección.
 
 - `Metodo_Biseccion.py`: Script principal para la ejecución del método de bisección con la interacción del usuario para ingresar parámetros.
 
