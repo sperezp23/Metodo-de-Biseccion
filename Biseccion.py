@@ -8,8 +8,8 @@ Epsilon: es el "cero" de la maquina
 ''' 
 
 # %% Reset
-from IPython import get_ipython
-get_ipython().magic('reset -sf')
+# from IPython import get_ipython
+# get_ipython().magic('reset -sf')
 
 # %% Librerías
 import pandas as pd
@@ -82,12 +82,24 @@ resultado_anterior = []
 a1 = "a(-)"
 b1 = "b(+)"
 aux = ""
+Err = ''
+FP = 0
+p = 0
+texto_resultado = f'''\n[a,b] = [{Linf},{Lsup}]
+p = {p}
+f(p) = {FP}
+Error{Err}{tipErr} = {E}
+Alfa = {alfa}
+Delta = {delta}
+TOL = {TOL}
+No = {i}
+{'-'*61}'''
 
 # %% Consideraciones iniciales
 if TOL == 0.0:
     TOL = epsilon
 
-if tipErr < 1.0 or tipErr > 3.0:
+if  1 < tipErr < 3:
     tipErr = 2
     
 if FA > 0:
@@ -111,7 +123,7 @@ while E> epsilon and i<=No:
         E = f.Errores(tipErr,p,z)
         
     if (FP != 0.0)and(i > 1):
-        delta = abs((FP-resultados[i-2][3])/(FP))
+        delta = f.Errores(2,FP,resultados[i-2][3])
         
     alfa = abs(E/alfa)
         
@@ -121,18 +133,8 @@ while E> epsilon and i<=No:
     
     #Resultado actual
     if (FP==0.0)or(delta<TOL):
-        print("-------------------------------------------------------------")
-        print("Proceso exitoso")
-        print("Datos de la ultima iteración")
-        print("[a,b] = ["+str(Linf)+","+str(Lsup)+"]")
-        print("p =",p)
-        print("f(p) =",FP)
-        print("Error"+Err+" =",E)
-        print("Alfa =",alfa)
-        print("Delta =",delta)
-        print("TOL =",TOL)
-        print("No =",i)
-        print("-------------------------------------------------------------")
+        print(f'{'-'*61}\nProceso exitoso\nDatos de la ultima iteración:')
+        print(texto_resultado)
         
         #Resultado anterior   
         if r_anterior == "y":
@@ -141,31 +143,23 @@ while E> epsilon and i<=No:
             resultado_biseccion.close()
             del(resultado_biseccion)
              
-            print("Ultimo resultado guardado")
+            print("Ultimo resultado guardado\n")
             
             for i in range(len(resultado_anterior)-9,len(resultado_anterior)-1):
                 aux = aux + (str(resultado_anterior[i]))
                  
-            print(aux+"-------------------------------------------------------------")
+            print(f'{aux}{'-'*61}')
     
         #Archivo de texto con los datos
         if guardar == "y":
             resultado_biseccion = open("resultado_biseccion.txt","a")
-            resultado_biseccion.write("[a,b] = ["+str(Linf)+","+str(Lsup)+"]\n")
-            resultado_biseccion.write("p = "+str(p)+"\n")
-            resultado_biseccion.write("f(p) = "+str(FP)+"\n")
-            resultado_biseccion.write("Error"+Err+" = "+str(E)+"\n")
-            resultado_biseccion.write("Alfa = "+str(alfa)+"\n")
-            resultado_biseccion.write("Delta = "+str(delta)+"\n")
-            resultado_biseccion.write("TOL = "+str(TOL)+"\n")
-            resultado_biseccion.write("No = "+str(i)+"\n")
-            resultado_biseccion.write("-------------------------------------------------------------\n")
+            resultado_biseccion.write(texto_resultado)
             resultado_biseccion.close()
             del(resultado_biseccion)
             
             #Creación del Data Frame
             df_resultados = pd.DataFrame(resultados,
-            columns=[a1,b1,"p","f(p)","Error"+Err,"Alfa","Delta","TOL"])
+                columns=[a1,b1,"p","f(p)","Error"+Err,"Alfa","Delta","TOL"])
             del(resultados)
             
             #Archivo de excel con los datos de las iteraciones

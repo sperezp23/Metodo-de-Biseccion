@@ -77,7 +77,7 @@ El código se enfoca en proporcionar una solución interactiva para encontrar ra
 3. Ejecución del Código: Ejecutar el script principal (`Metodo_Biseccion.py`) y seguir las instrucciones proporcionadas en la consola para ingresar los parámetros.
 
 4. Resultados: Se generarán archivos de texto (`resultado_biseccion.txt`) y un archivo Excel (`Datos_Biseccion.xlsx`) con los datos de las iteraciones si el usuario así lo desea, 
-   de lo contrario, se imprime el resultado final junto con otros datos de interes en consola.
+   de lo contrario, se imprime el resultado final junto con otros datos de interés en consola.
 
 ## Estructura del Proyecto
 
@@ -87,8 +87,8 @@ El código se enfoca en proporcionar una solución interactiva para encontrar ra
 
 - Archivos de entrada (`Entradas.txt`, `Entradas.json`): Opcionales. Contienen datos de entrada para los parámetros del método.
 
-- Entradas por consola: El programa pide al usuario ingresar los parametros necesarios para el calculo de la raíz de la funcion establecidad
-  (Este proceso se lleva a cavo si el usuario no cuenta con un archivo de esntradas). 
+- Entradas por consola: El programa pide al usuario ingresar los parámetros necesarios para el calculo de la raíz de la funcion establecidad
+  (Este proceso se lleva a cavo si el usuario no cuenta con un archivo de entradas). 
 
 ## Ejemplo de Uso
 
